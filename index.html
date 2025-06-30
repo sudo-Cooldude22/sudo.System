@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Windows XP Window</title>
-  <style>
-    body {
-      background-color: #008080;
-      font-family: Tahoma, sans-serif;
-      padding: 50px;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Windows XP Style Window</title>
+<style>
+  /* Classic XP desktop background color */
+  body {
+    background-color: #008080;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+  }
 
-    .xp-window {
-      width: 400px;
-      border: 2px solid #000080;
-      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-      background-color: #ECE9D8;
-    }
+  /* Window container */
+  .xp-window {
+    width: 400px;
+    border: 2px solid #000080;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    background-color: #c0c0c0;
+  }
 
-    .title-bar {
-      background: linear-gradient(to right, #0a246a, #a6caf0);
-      color: white;
-      padding: 4px 8px;
-      font-weight: bold;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 24px;
-      box-sizing: border-box;
-    }
+  /* Title bar */
+  .xp-titlebar {
+    background: linear-gradient(to bottom, #000080, #0000cd);
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
 
-    .title-bar .title {
-      font-size: 14px;
-    }
+  /* Title text */
+  .xp-titlebar .title {
+    font-size: 14px;
+  }
 
-    .title-bar .buttons {
-      display: flex;
-      gap: 2px;
-    }
+  /* Buttons container */
+  .xp-buttons {
+    display: flex;
+    gap: 6px;
+  }
 
-    .title-bar button {
-      width: 16px;
-      height: 16px;
-      background-color: #d6d3ce;
-      border: 1px solid #808080;
-      font-size: 10px;
-      cursor: pointer;
-      padding: 0;
-    }
+  /* Individual button */
+  .xp-button {
+    width: 18px;
+    height: 16px;
+    background-color: #000080;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow:
+      inset 0 1px white,
+      inset 0 -1px #000040;
+  }
 
-    .content {
-      padding: 12px;
-      background-color: #ffffff;
-      min-height: 100px;
-    }
-  </style>
+  /* Hover effect for buttons */
+  .xp-button:hover {
+    background-color: #0000cd;
+  }
+
+  /* Window content */
+  .xp-content {
+    background-color: white;
+    padding: 15px 20px;
+    color: black;
+    font-size: 13px;
+    min-height: 120px;
+  }
+</style>
 </head>
 <body>
-  <div class="xp-window">
-    <div class="title-bar">
-      <div class="title">My Documents</div>
-      <div class="buttons">
-        <button title="Minimize">_</button>
-        <button title="Maximize">☐</button>
-        <button title="Close">✕</button>
-      </div>
-    </div>
-    <div class="content">
-      <p>This is a simulated Windows XP window.</p>
-      <p>You can customize this with menus, icons, or file lists.</p>
+
+<div class="xp-window">
+  <div class="xp-titlebar">
+    <div class="title">My Computer</div>
+    <div class="xp-buttons">
+      <div class="xp-button" title="Minimize">_</div>
+      <div class="xp-button" title="Maximize">☐</div>
+      <div class="xp-button" title="Close">×</div>
     </div>
   </div>
+  <div class="xp-content">
+    <p>Welcome to your Windows XP style window!</p>
+    <p>You can customize this window content however you like.</p>
+  </div>
+</div>
+
 </body>
 </html>
+
